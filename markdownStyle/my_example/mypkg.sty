@@ -1,0 +1,59 @@
+\ProvidesPackage{mypkg}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \scriptsize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = spacefixed,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+% language = Python, style = lgeneral
+\lstset{style = lgeneral}
+
+\usepackage[
+  hashEnumerators,
+  definitionLists,
+  footnotes,
+  inlineFootnotes,
+  smartEllipses,
+  fencedCode,
+  contentBlocks,
+  pipeTables,
+  tableCaptions,
+]{markdown}
+
+\usepackage{hyperref}
+\markdownSetup{fencedCode = true, 
+hybrid = true, 
+pipeTables = true,
+hashEnumerators = true,}
+
+\usepackage{booktabs}  %  三线表宏包
+
